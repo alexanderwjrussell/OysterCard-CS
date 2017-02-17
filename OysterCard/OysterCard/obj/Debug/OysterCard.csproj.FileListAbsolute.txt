@@ -1,0 +1,5 @@
+C:\Git\Random Projects\OysterCard_CS\OysterCard\OysterCard\obj\Debug\OysterCard.csprojResolveAssemblyReference.cache
+C:\Git\Random Projects\OysterCard_CS\OysterCard\OysterCard\bin\Debug\OysterCard.dll
+C:\Git\Random Projects\OysterCard_CS\OysterCard\OysterCard\bin\Debug\OysterCard.pdb
+C:\Git\Random Projects\OysterCard_CS\OysterCard\OysterCard\obj\Debug\OysterCard.dll
+C:\Git\Random Projects\OysterCard_CS\OysterCard\OysterCard\obj\Debug\OysterCard.pdb

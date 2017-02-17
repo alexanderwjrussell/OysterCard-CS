@@ -1,14 +1,17 @@
 ﻿using System;
-//using NUnit.Framework;
+using NUnit.Framework;
 
-namespace OysterCardTests
+namespace OysterCard
 {
-    //[TestFixture]
-    public class NUnitTest1
+    [TestFixture]
+    public class OysterCardTests
     {
-        //[Test]
-        public void TestMethod1()
+        [Test]
+        public void Should_HaveZeroBalance_OnInstantiation()
         {
+            var oysterCard = new OysterCard();
+
+            Assert.That(oysterCard.Balance, Is.EqualTo(0));
         }
     }
 }

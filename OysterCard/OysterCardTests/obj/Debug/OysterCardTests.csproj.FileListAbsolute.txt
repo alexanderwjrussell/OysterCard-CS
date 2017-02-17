@@ -1,0 +1,9 @@
+C:\Git\Random Projects\OysterCard_CS\OysterCard\OysterCardTests\obj\Debug\OysterCardTests.csprojResolveAssemblyReference.cache
+C:\Git\Random Projects\OysterCard_CS\OysterCard\OysterCardTests\bin\Debug\OysterCardTests.dll
+C:\Git\Random Projects\OysterCard_CS\OysterCard\OysterCardTests\bin\Debug\OysterCardTests.pdb
+C:\Git\Random Projects\OysterCard_CS\OysterCard\OysterCardTests\bin\Debug\nunit.framework.dll
+C:\Git\Random Projects\OysterCard_CS\OysterCard\OysterCardTests\bin\Debug\OysterCard.dll
+C:\Git\Random Projects\OysterCard_CS\OysterCard\OysterCardTests\bin\Debug\OysterCard.pdb
+C:\Git\Random Projects\OysterCard_CS\OysterCard\OysterCardTests\bin\Debug\nunit.framework.xml
+C:\Git\Random Projects\OysterCard_CS\OysterCard\OysterCardTests\obj\Debug\OysterCardTests.dll
+C:\Git\Random Projects\OysterCard_CS\OysterCard\OysterCardTests\obj\Debug\OysterCardTests.pdb
