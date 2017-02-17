@@ -13,5 +13,15 @@ namespace OysterCard
 
             Assert.That(oysterCard.Balance, Is.EqualTo(0));
         }
+
+        [Test]
+        public void Should_BeAble_ToTopUpBalance()
+        {
+            var oysterCard = new OysterCard();
+
+            oysterCard.TopUp(10);
+
+            Assert.That(oysterCard.Balance, Is.EqualTo(10));
+        }
     }
 }

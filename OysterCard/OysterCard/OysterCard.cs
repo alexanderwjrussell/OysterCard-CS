@@ -8,5 +8,10 @@
         {
             int Balance = 0;
         }
+
+        public void TopUp(int amount)
+        {
+            Balance += amount;
+        }
     }
 }
