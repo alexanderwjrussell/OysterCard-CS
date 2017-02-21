@@ -42,5 +42,36 @@ namespace OysterCard
 
             Assert.That(oysterCard.Balance, Is.EqualTo(10));
         }
+
+        [Test]
+        public void Should_BeAbleTo_TouchInToStartAJourney()
+        {
+            var oysterCard = new OysterCard();
+            var terminal = new Terminal();
+
+            oysterCard.TouchIn(terminal);
+
+            Assert.That(oysterCard.InJourney, Is.EqualTo(true));
+        }
+
+        [Test]
+        public void Should_BeAbleTo_TouchOutToCompleteAJourney()
+        {
+            var oysterCard = new OysterCard();
+            var terminal = new Terminal();
+
+            oysterCard.TouchIn(terminal);
+            oysterCard.TouchOut(terminal);
+
+            Assert.That(oysterCard.InJourney, Is.EqualTo(false));
+        }
+
+        [Test]
+        public void Should_NotBeAbleToTravel_IfBalanceUnderMinimumRequired()
+        {
+            var oysterCard = new OysterCard();
+
+            Assert.Throws<Exception>(() => oysterCard.Deduct(5));
+        }
     }
 }
