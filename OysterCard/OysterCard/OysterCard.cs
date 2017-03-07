@@ -7,13 +7,15 @@ namespace OysterCard
     {
         public int Balance { get; private set; }
         public bool InJourney { get; private set; }
-        public const int MAXIMUM_BALANCE = 100;
-        public const int MINIMUM_FARE = 2;
+        public SingleJourney singleJourney { get; }
+        private const int MAXIMUM_BALANCE = 100;
+        private const int MINIMUM_FARE = 2;
 
         public OysterCard()
         {
-            int Balance = 0;
-            bool InJourney = false;
+            Balance = 0;
+            InJourney = false;
+            singleJourney = new SingleJourney();
         }
 
         public void TopUp(int amount)
@@ -25,19 +27,38 @@ namespace OysterCard
 
         public void Deduct(int amount)
         {
-            if (Balance < MINIMUM_FARE)
-                throw new Exception("Insufficient funds. Please top up your card before travel");
+            CheckBlance();
             Balance -= amount;
         }
 
         public void TouchIn(Terminal terminal)
         {
             InJourney = true;
+            RecordEntryTerminal(terminal);
         }
 
         public void TouchOut(Terminal terminal)
         {
             InJourney = false;
+            RecordExitTerminal(terminal);
+        }
+
+        private void RecordEntryTerminal(Terminal terminal)
+        {
+            singleJourney.entryTerminal = terminal.Name;
+            singleJourney.entryTerminalZone = terminal.Zone;
+        }
+
+        private void RecordExitTerminal(Terminal terminal)
+        {
+            singleJourney.exitTerminal = terminal.Name;
+            singleJourney.exitTerminalZone = terminal.Zone;
+        }
+
+        private void CheckBlance()
+        {
+            if (Balance < MINIMUM_FARE)
+                throw new Exception("Insufficient funds. Please top up your card before travel");
         }
     }
 }

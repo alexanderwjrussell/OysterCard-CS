@@ -47,7 +47,7 @@ namespace OysterCard
         public void Should_BeAbleTo_TouchInToStartAJourney()
         {
             var oysterCard = new OysterCard();
-            var terminal = new Terminal();
+            var terminal = new Terminal("Camden Street", 2);
 
             oysterCard.TouchIn(terminal);
 
@@ -58,7 +58,7 @@ namespace OysterCard
         public void Should_BeAbleTo_TouchOutToCompleteAJourney()
         {
             var oysterCard = new OysterCard();
-            var terminal = new Terminal();
+            var terminal = new Terminal("Camden Street", 2);
 
             oysterCard.TouchIn(terminal);
             oysterCard.TouchOut(terminal);
@@ -67,7 +67,7 @@ namespace OysterCard
         }
 
         [Test]
-        public void Should_NotBeAbleToTravel_IfBalanceUnderMinimumRequired()
+        public void Should_NotBeAbleToTravel_IfBalanceIsUnderMinimumRequired()
         {
             var oysterCard = new OysterCard();
 
